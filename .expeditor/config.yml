@@ -31,9 +31,6 @@ subscriptions:
           ignore_labels:
             - "Expeditor: Skip Changelog"
             - "Expeditor: Skip All"
-      - bash:.expeditor/update_readme.sh:
-          ignore_labels:
-            - "Expeditor: Skip All"
       - trigger_pipeline:go/build:
           post_commit: true
           ignore_labels:

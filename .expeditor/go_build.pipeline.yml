@@ -1,1 +1,24 @@
+steps:
+  - label: ":go: build"
+    command: 
+      - goreleaser build --rm-dist --skip-validate
+      - tar -czf file-mod.tar.gz /workdir/dist
+      - buildkite-agent artifact upload "file-mod.tar.gz"
+    expeditor:
+      executor:
+        docker:
 
+  - wait
+
+  - label: ":artifactory: upload"
+    command: 
+      - buildkite-agent artifact download "file-mod.tar.gz" .
+      - tar -xzf file-mod.tar.gz
+      - .expeditor/artifact_upload.sh
+    expeditor:
+      secrets:
+        ARTIFACTORY_TOKEN:
+          path: account/static/artifactory/buildkite
+          field: token
+      executor:
+        docker:
