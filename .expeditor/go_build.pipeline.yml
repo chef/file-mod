@@ -2,7 +2,8 @@ steps:
   - label: ":go: build"
     command: 
       - goreleaser build --rm-dist --skip-validate
-      - tar -czf file-mod.tar.gz /workdir/dist
+      - cd /workdir
+      - tar -czf file-mod.tar.gz dist/
       - buildkite-agent artifact upload "file-mod.tar.gz"
     expeditor:
       executor:
