@@ -11,11 +11,12 @@ echo "--- Uploading binaries to Artifactory"
 
 for file in ${workdir}/**/*
 do
-  IFS='/' read -r -a path <<< "${file}"
-  dir_path=${path[1]}
-  binary=${path[2]}
+  dir_path=$(dirname "${file}")
+  binary=$(basename "${file}")
 
-  IFS='_' read -r -a parts <<< "${dir_path}"
+  # get the last part of the dir path to strip the OS and ARCH
+  # ex: <binary>_<os>_<arch>
+  IFS='_' read -r -a parts <<< "$(basename "${dir_path}")"
   util_name=${parts[0]}
   os=${parts[1]}
   arch=${parts[2]}
@@ -23,7 +24,7 @@ do
   jfrog rt u \
   --apikey="${ARTIFACTORY_TOKEN}" \
   --url=https://artifactory.chef.co/artifactory \
-  --props "project=file-mod;version=${version};os=${os};arch=${arch}" \
+  --props "project=${util_name};version=${version};os=${os};arch=${arch}" \
   "${file}" \
   "go-binaries-local/${util_name}/${version}/${os}/${arch}/${binary}"
 done
