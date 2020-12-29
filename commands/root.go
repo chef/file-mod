@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/chef/ci-studio-common/internal/pkg/filesystem"
+	"github.com/chef/file-mod/internal/pkg/filesystem"
 )
 
 var (

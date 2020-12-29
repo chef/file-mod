@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/chef/ci-studio-common/cmd/file-mod/commands"
+	"github.com/chef/file-mod/commands"
 )
 
 func main() {
