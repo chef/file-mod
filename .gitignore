@@ -4,10 +4,11 @@ results/
 build/
 .vscode/
 
-# goreleaser 
+# goreleaser
 dist/
 
 # releases
 go-binaries/
 *.zip
 *.tar.gz
+file-mod
