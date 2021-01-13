@@ -9,14 +9,21 @@ import (
 )
 
 var (
+	version string
+
 	fs filesystem.FileSystem
 
 	rootCmd = &cobra.Command{
 		Use:          "file-mod",
 		Short:        "Command line utility to modify files.",
 		SilenceUsage: true,
+		Version:      version,
 	}
 )
+
+func init() {
+	rootCmd.SetVersionTemplate("{{.Version}}\n")
+}
 
 // Execute handles the execution of child commands and flags.
 func Execute() {

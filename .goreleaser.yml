@@ -5,6 +5,8 @@ builds:
   - id: "file-mod"
     binary: file-mod
     main: main.go
+    ldflags:
+      - -s -w -X github.com/chef/file-mod/commands.version={{.Version}}
     env:
       - CGO_ENABLED=0
     goos:
