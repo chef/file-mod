@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/chef/file-mod/internal/pkg/filesystem"
+	filesystem "github.com/chef/go-filesystem"
 )
 
 var (
