@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/chef/file-mod/internal/pkg/filesystem"
+	filesystem "github.com/chef/go-filesystem"
 )
 
 func TestFindAndReplaceE(t *testing.T) {
