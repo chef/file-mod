@@ -37,3 +37,13 @@ Flags:
 Use "file-mod [command] --help" for more information about a command.
 ```
 <!-- stdout -->
+
+#### find-and-replace Sample Usage
+
+> This tool uses the [regexp](https://golang.org/pkg/regexp/) library under the covers.
+
+```
+# Update indented version reference in file (single line)
+VERSION=$(cat VERSION)
+file-mod find-and-replace "(?m)(\s+)VERSION = \".+\"" "\${1}VERSION = \"$VERSION\"" myfile.ext
+```
