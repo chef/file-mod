@@ -1,11 +1,16 @@
 # Changelog
 
-<!-- latest_release 1.0.5 -->
+<!-- latest_release 1.0.6 -->
+## [1.0.6](https://github.com/chef/file-mod/tree/1.0.6) (2022-06-06)
+
+#### Merged Pull Requests
+- Add freebsd_amd64 and linux_386 to build matrix [#8](https://github.com/chef/file-mod/pull/8) ([jeremiahsnapp](https://github.com/jeremiahsnapp))
+<!-- latest_release -->
+
 ## [1.0.5](https://github.com/chef/file-mod/tree/1.0.5) (2021-02-19)
 
 #### Merged Pull Requests
 - Build on darwin/arm64 [#6](https://github.com/chef/file-mod/pull/6) ([tduffield](https://github.com/tduffield))
-<!-- latest_release -->
 
 ## [1.0.4](https://github.com/chef/file-mod/tree/1.0.4) (2021-02-09)
 
