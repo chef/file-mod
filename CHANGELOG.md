@@ -1,11 +1,16 @@
 # Changelog
 
-<!-- latest_release 1.0.7 -->
+<!-- latest_release 1.0.8 -->
+## [1.0.8](https://github.com/chef/file-mod/tree/1.0.8) (2026-04-17)
+
+#### Merged Pull Requests
+- CHEF-26012 - Create CODE_OF_CONDUCT.md file [#10](https://github.com/chef/file-mod/pull/10) ([cgunasree08](https://github.com/cgunasree08))
+<!-- latest_release -->
+
 ## [1.0.7](https://github.com/chef/file-mod/tree/1.0.7) (2022-06-06)
 
 #### Merged Pull Requests
 - Updates to get builds working [#9](https://github.com/chef/file-mod/pull/9) ([jeremiahsnapp](https://github.com/jeremiahsnapp))
-<!-- latest_release -->
 
 ## [1.0.6](https://github.com/chef/file-mod/tree/1.0.6) (2022-06-06)
 
