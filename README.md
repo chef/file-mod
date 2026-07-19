@@ -48,3 +48,6 @@ Use "file-mod [command] --help" for more information about a command.
 VERSION=$(cat VERSION)
 file-mod find-and-replace "(?m)(\s+)VERSION = \".+\"" "\${1}VERSION = \"$VERSION\"" myfile.ext
 ```
+
+# Copyright
+See [COPYRIGHT.md](./COPYRIGHT.md).
